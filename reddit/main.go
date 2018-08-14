@@ -46,7 +46,7 @@ func Get(reddit string) ([]Item, error) {
 	if resp.StatusCode != http.StatusOK {
 		return nil, errors.New(resp.Status)
 	}
-	
+
 	r := new(Response)
 	err = json.NewDecoder(resp.Body).Decode(r)
 	if err != nil {
