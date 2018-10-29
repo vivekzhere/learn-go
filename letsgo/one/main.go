@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.wdf.sap.corp/i332859/learn-go/letsgo/structs"
+	"github.wdf.sap.corp/i332859/learn-go/letsgo/one/structs"
 )
 
 func main() {
