@@ -25,3 +25,20 @@ func Service(ch chan bool) {
 
 	}
 }
+
+func Service2(ch chan bool) {
+	for {
+		select {
+		case val := <-ch:
+			if val {
+				fmt.Println("Im done")
+				return
+			}
+			fmt.Println("Im not done")
+		default:
+			fmt.Println("Hello")
+			time.Sleep(1 * time.Second)
+		}
+
+	}
+}

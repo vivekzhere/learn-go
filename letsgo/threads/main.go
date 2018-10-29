@@ -9,8 +9,7 @@ import (
 
 func main() {
 	ch := make(chan bool, 2)
-	go thread.Service(ch)
-	fmt.Println("World")
+	go thread.Service2(ch)
 
 	time.Sleep(5 * time.Second)
 	ch <- false
@@ -18,6 +17,6 @@ func main() {
 	time.Sleep(5 * time.Second)
 	ch <- true
 
-	time.Sleep(15 * time.Second)
-
+	time.Sleep(2 * time.Second)
+	fmt.Println("Main done")
 }
